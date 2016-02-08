@@ -11,6 +11,13 @@ class SpockSpec extends Specification {
     // setup main object; mocks done within "features"
     def spock = Spock.instance
 
+    Should 'be a logical, nice, vulcan named spock'() {
+        expect:
+            Spock.instance.decideIfNiceOrNasty() == 'i am a _nice logical_ creature' 
+            Spock.instance.type() == 'vulcan'
+            Spock.instance.name() == 'spock'
+    }
+
     Should 'decide if logical'() {
         when:
             def reaction = Spock.instance.decideIfLogical(20, 20)

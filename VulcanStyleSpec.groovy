@@ -11,7 +11,7 @@ class VulcanStyleSpec extends Specification {
     // setup main object; mocks done within "features"
     VulcanStyle vulcan = new Object() as VulcanStyle    // coerce trait to object so we can test
 
-    Should 'be vulcan'() {
+    Should 'be a soothing vulcan'() {
         expect:
             vulcan.type() == 'vulcan'
             vulcan.soothe() == 'live long and prosper'
